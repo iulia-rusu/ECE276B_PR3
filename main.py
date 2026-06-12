@@ -93,7 +93,7 @@ def main():
 
         ################################################################
         # Generate control input
-        # TODO: Replace this simple controller with your own controller
+        
         # control = utils.simple_controller(cur_state, cur_ref) #cec?
         control = control_fn(cur_iter, cur_state, cur_ref)
         print("[v,w]", control)
@@ -136,7 +136,7 @@ def main():
     car_states = np.array(car_states)
     times = np.array(times)
     #can save or not save the gif
-    utils.visualize(car_states, ref_traj, obstacles, times, utils.time_step, save=False, name=control_alg)
+    utils.visualize(car_states, ref_traj, obstacles, times, utils.time_step, save=True, name=control_alg)
 
 
 if __name__ == "__main__":
